@@ -1,0 +1,7 @@
+syntax = "proto3";
+package order.v1;
+option go_package = "/orderpb";
+message OrderItem { string sku = 1; int32 quantity = 2; }
+message CreateOrderRequest { string user_id = 1; repeated OrderItem items = 2; }
+message CreateOrderResponse { string order_id = 1; string status = 2; string
+message = 3; }
